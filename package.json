@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.3.0",
+    "dotenv": "^8.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "^3.3.0",
+    "style-loader": "^1.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "main": "index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "scripts": {
+    "build": "ENVIRONMENT=prod webpack --config webpack.config.prod.js",
+    "build:staging": "ENVIRONMENT=staging webpack --config webpack.config.dev.js",
+    "build:dev": "ENVIRONMENT=staging webpack --config webpack.config.dev.js",
+    "start": "ENVIRONMENT=dev webpack-dev-server --open --config webpack.config.dev.js",
+    "start:staging": "ENVIRONMENT=staging webpack-dev-server --open --config webpack.config.dev.js"
+  }
+}
